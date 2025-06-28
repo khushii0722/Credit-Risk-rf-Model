@@ -7,8 +7,6 @@ Original file is located at
     https://colab.research.google.com/drive/1l9w5frZ_WYBzsjjBkDrCQYF8q9gFH7S4
 """
 
-pip install ucimlrepo
-
 from ucimlrepo import fetch_ucirepo
 
 # fetch dataset
