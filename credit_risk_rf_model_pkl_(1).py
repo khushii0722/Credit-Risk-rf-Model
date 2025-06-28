@@ -105,16 +105,16 @@ plt.title(f'{cat_feature} vs Credit Risk')
 plt.show()
 
 num_features = ['duration_months', 'credit_amount', 'age']
-    for feature in num_features:
-        plt.figure(figsize=(6,4))
-        sns.histplot(X[feature], bins=20, kde=True)
-        plt.title(f'Distribution of {feature}')
-        plt.show()
+for feature in num_features:
+plt.figure(figsize=(6,4))
+sns.histplot(X[feature], bins=20, kde=True)
+plt.title(f'Distribution of {feature}')
+plt.show()
 
-        plt.figure(figsize=(6,4))
-        sns.boxplot(x=y['Target'], y=X[feature])
-        plt.title(f'{feature} by Credit Risk')
-        plt.show()
+plt.figure(figsize=(6,4))
+sns.boxplot(x=y['Target'], y=X[feature])
+plt.title(f'{feature} by Credit Risk')
+plt.show()
 
 cat_features = ['checking_account_status', 'credit_history', 'purpose', 'personal_status_sex', 'housing']
     for feature in cat_features:
@@ -294,6 +294,4 @@ display(results_df_sorted.head(10))
 
 import joblib
 joblib.dump(rf, 'credit_risk_rf_model.pkl')
-
-pip install --upgrade gradio
 
