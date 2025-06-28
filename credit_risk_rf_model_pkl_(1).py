@@ -100,9 +100,9 @@ plt.show()
 target_col = 'Target'
 
 plt.figure(figsize=(6,4))
-   sns.countplot(x=cat_feature, hue=target_col, data=pd.concat([X, y], axis=1))
-   plt.title(f'{cat_feature} vs Credit Risk')
-   plt.show()
+sns.countplot(x=cat_feature, hue=target_col, data=pd.concat([X, y], axis=1))
+plt.title(f'{cat_feature} vs Credit Risk')
+plt.show()
 
 num_features = ['duration_months', 'credit_amount', 'age']
     for feature in num_features:
