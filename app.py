@@ -2,6 +2,21 @@ import streamlit as st
 import pandas as pd
 import joblib
 
+# 1. Define the mapping dictionary FIRST
+checking_account_options = {
+    "< 0 DM": "A11",
+    "0 <= ... < 200 DM": "A12",
+    ">= 200 DM or salary assignments": "A13",
+    "No checking account": "A14"
+}
+
+# 2. Then use it in your selectbox
+checking_account_status_label = st.selectbox("Checking Account Status", list(checking_account_options.keys()))
+checking_account_status = checking_account_options[checking_account_status_label]
+import streamlit as st
+import pandas as pd
+import joblib
+
 # Step 1: Mapping dictionaries (put here)
 checking_account_options = { ... }
 purpose_options = { ... }
